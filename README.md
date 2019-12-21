@@ -1,69 +1,51 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# Cordova PlugPag Plugin Demo App in Ionic 3 (v3.20.0) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
-A PhoneGap Hello World template
+****
 
-## Usage
+This repository was made in order to help people learn how to cordova-plugin-pagseguro-plugpag works.
+Currently this plugin works only on Android devices, this repo will be updated if necessary to attend IOS particularities.
 
-#### PhoneGap CLI
-
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
-
-    phonegap create my-app
-
-Create an app using this template specifically:
-
-    phonegap create my-app --template hello-world
-
-To see a list of other available PhoneGap templates:
-
-    phonegap template list
-
-## [config.xml][config-xml]
-
-#### android-minSdkVersion (Android only)
-
-Minimum SDK version supported on the target device. Maximum version is blank by default.
-
-This template sets the minimum to `14`.
-
-    <preference name="android-minSdkVersion" value="14" />
-
-#### &lt;access ...&gt; (All)
-
-This template defaults to wide open access.
-
-    <access origin="*" />
-
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
-
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
-
-## [www/index.html][index-html]
-
-#### Content Security Policy (CSP)
-
-The default CSP is similarly open:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
+**HOPEFULLY** you will like this repo and feel like contributing, so please if you can, contribute so we can have even more amazing content!
 
 
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
+## Setup
+
+Requirements to use this project:
+
+##### Node.js (https://nodejs.org/download/)
+
+##### npm (Node Package Manager, it comes with node.js installation)
+In case you're not with the latest version of npm:
+```sh
+$ sudo npm install npm -g
+```
+
+##### Cordova & Phonegap Cli
+To install both of them on your system just launch this command:
+```sh
+$ sudo npm install cordova -g
+$ sudo npm install phonegap -g
+```
+
+## Install NPM Dependencies
+Once you clone this repository, run this command on your terminal to install all needed dependencies:
+```sh
+$ npm install
+```
+
+## Install cordova plugin Dependencies
+Run this command on your terminal to add a platform and install all needed puglins:
+
+
+Android:
+```sh
+$ cordova platform add android
+```
+## Launching the App
+After installing the needed dependencies you are done, launch your app in a device with a simple
+```sh
+$ cordova run android
+```
+
+## Grant the App permissions on your mobile settings
+For the functionalities, this project needs some permissions, enable it on phone settings.
