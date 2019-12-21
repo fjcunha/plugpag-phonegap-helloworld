@@ -1,4 +1,4 @@
-# Cordova PlugPag Plugin Demo App in Ionic 3 (v3.20.0) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
+# Cordova PlugPag Plugin Demo App in Phonegap [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
 ****
 
