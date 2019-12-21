@@ -69,14 +69,16 @@ var app = {
             }
         );
 
-        cordova.plugins.PlugPag.getLibVersion(
-            function(res){
-                app.display('Plugpag lib result: ' + JSON.stringify(res));
-            },
-            function(error){
-                app.display('Plugpag lib Error: ' + JSON.stringify(error));
-            }
-        )
+
+        // code to return plugpag lib version
+        // cordova.plugins.PlugPag.getLibVersion(
+        //     function(res){
+        //         app.display('Plugpag lib result: ' + JSON.stringify(res));
+        //     },
+        //     function(error){
+        //         app.display('Plugpag lib Error: ' + JSON.stringify(error));
+        //     }
+        // )
     },
     createPayment: function() {
         console.log('Create Payment Method');
@@ -119,7 +121,7 @@ var valueToPay;
 function chooseDevice(device){
     console.log(device);
     console.log(valueToPay);
-    app.display(`Trying to connect on device: ${device} -> R$${(valueToPay/100).toFixed(2)}`);
+    // app.display(`Trying to connect on device: ${device} -> R$${(valueToPay/100).toFixed(2)}`);
 
     document.getElementById('devices').innerHTML =('');
 
@@ -143,7 +145,7 @@ function chooseDevice(device){
         amount:parseInt(valueToPay)
     };
 
-    app.display(JSON.stringify(paymentObj));
+    // app.display(JSON.stringify(paymentObj));
 
     cordova.plugins.PlugPag.startPayment(paymentObj,function(success){
         if(success.TransactionCode){
@@ -156,7 +158,7 @@ function chooseDevice(device){
     },
     function(error){
         alert('Falha ao comunicar com a biblioteca de pagamento.');
-        app.display(JSON.stringify(error));
+        // app.display(JSON.stringify(error));
     })
 
     // cordova.plugins.PlugPag.initBTConnection(deviceId,function(success){
